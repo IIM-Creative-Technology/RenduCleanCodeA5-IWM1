@@ -12,6 +12,8 @@
   },
   "homepage": "https://github.com/IIM-Creative-Technology/RenduCleanCodeA5-IWM1#readme",
   "devDependencies": {
+    "@antfu/eslint-config": "^0.31.0",
+    "eslint": "^8.27.0",
     "vitest": "^0.25.2"
   },
   "workspaces": [
