@@ -4,6 +4,11 @@ import { ClientError } from '~/core/errors/ClientError'
 
 export class InMemoryClientGateway implements ClientGateway {
   private clients: Client[] = []
+  private uuidGenerator: () => string
+
+  constructor(uuidGenerator: ()=> string) {
+    this.uuidGenerator = uuidGenerator
+  }
 
   set(clients: Array<Client>) {
     this.clients = clients
@@ -29,5 +34,14 @@ export class InMemoryClientGateway implements ClientGateway {
     if (!foundClient)
       throw new ClientError(`No client with this id (${id})`, 404)
     return Promise.resolve(foundClient)
+  }
+
+  async create(name: string): Promise<Client> {
+    const newClient = {
+      id: this.uuidGenerator(),
+      name,
+    }
+    this.clients.push(newClient)
+    return Promise.resolve(newClient)
   }
 }
