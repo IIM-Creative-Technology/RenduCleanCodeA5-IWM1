@@ -6,4 +6,5 @@ export interface ClientGateway {
   getById(id: string): Promise<Client>
   remove(id: string): Promise<Client>
   search(query: string): Promise<Client[]>
+  create(name: string): Promise<Client>
 }
