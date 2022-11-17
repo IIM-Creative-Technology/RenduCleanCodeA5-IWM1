@@ -11,6 +11,7 @@
 
 ## Commandes utiles
 npm run dev -w backend
+npm run dev -ws
 
 ## Commit rules
 <type>(<scope>): <description>
@@ -23,3 +24,6 @@ chore
 
 Scope:
 Back ou Front, Client ou Documents, ou numéro d'issue...
+
+## Règles de nommage de fichiers
+On donne le nom de ce qu'on exporte, donc minuscule pour des fonctions (camel) et majuscules pour des classes (pascal).
