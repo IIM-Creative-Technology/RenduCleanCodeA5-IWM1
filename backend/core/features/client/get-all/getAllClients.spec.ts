@@ -1,11 +1,14 @@
 import { InMemoryClientGateway } from 'adapters/secondary/gateways/client/InMemoryClientGateway'
-import { describe, expect, it } from 'vitest'
+import { beforeEach, describe, expect, it } from 'vitest'
 import { getAllClients } from './getAllClients'
 
 describe('List all clients', () => {
+  let clientGateway: InMemoryClientGateway
+  beforeEach(() => {
+    clientGateway = new InMemoryClientGateway()
+  })
   describe('There is no clients', () => {
     it('should return an empty array', async () => {
-      const clientGateway = new InMemoryClientGateway()
       const clients = await getAllClients(clientGateway)
       expect(clients).toEqual([])
     })
@@ -23,7 +26,6 @@ describe('List all clients', () => {
           name: 'Jane Doe',
         },
       ]
-      const clientGateway = new InMemoryClientGateway()
       clientGateway.set(testClients)
       const clients = await getAllClients(clientGateway)
       expect(clients).toEqual(testClients)
