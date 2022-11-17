@@ -19,4 +19,8 @@ export class InMemoryClientGateway implements ClientGateway {
       throw new ClientError(`No client with this id (${id})`, 404)
     return this.clients.splice(clientIndex, 1)[0]
   }
+
+  async search(query: string): Promise<Client[]> {
+    return this.clients.filter(client => client.name.includes(query))
+  }
 }
