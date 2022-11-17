@@ -1,0 +1,20 @@
+{
+  "name": "renducleancodea5-iwm1",
+  "version": "1.0.0",
+  "description": "- Colin Espinas\r  - Johana Bukal\r  - Alexandre Fontaine",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IIM-Creative-Technology/RenduCleanCodeA5-IWM1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IIM-Creative-Technology/RenduCleanCodeA5-IWM1/issues"
+  },
+  "homepage": "https://github.com/IIM-Creative-Technology/RenduCleanCodeA5-IWM1#readme",
+  "devDependencies": {
+    "vitest": "^0.25.2"
+  },
+  "workspaces": [
+    "backend"
+  ]
+}
