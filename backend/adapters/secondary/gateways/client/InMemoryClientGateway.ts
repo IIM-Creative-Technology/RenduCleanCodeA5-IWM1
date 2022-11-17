@@ -25,9 +25,9 @@ export class InMemoryClientGateway implements ClientGateway {
   }
 
   async getById(id: string): Promise<Client> {
-    if (this.clients.find(x => x.id === id))
-      return Promise.resolve(this.clients.find(x => x.id === id))
-    else
-      throw new ClientError(`L'id ${id} n'existe pas.`, 404)
+    const foundClient = this.clients.find(client => client.id === id)
+    if (!foundClient)
+      throw new ClientError(`No client with this id (${id})`, 404)
+    return Promise.resolve(foundClient)
   }
 }
