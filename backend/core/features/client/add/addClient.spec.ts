@@ -10,7 +10,7 @@ describe ('Add client',() => {
       name: 'Francis Doe'
     }
 
-    let res
+    let res: Client
     let clientGateway: InMemoryClientGateway
     beforeEach(async ()=> {
       const uuidGenerator = ()=> 'test_id'

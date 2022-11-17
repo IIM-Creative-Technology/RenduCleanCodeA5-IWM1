@@ -37,7 +37,7 @@ export class InMemoryClientGateway implements ClientGateway {
   }
 
   async create(name: string): Promise<Client> {
-    const newClient = {
+    const newClient: Client = {
       id: this.uuidGenerator(),
       name,
     }
