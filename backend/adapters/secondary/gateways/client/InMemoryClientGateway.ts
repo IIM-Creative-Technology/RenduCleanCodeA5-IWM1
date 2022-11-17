@@ -23,4 +23,8 @@ export class InMemoryClientGateway implements ClientGateway {
   async search(query: string): Promise<Client[]> {
     return this.clients.filter(client => client.name.includes(query))
   }
+
+  async getById(id: string): Promise<Client> {
+    return Promise.resolve(this.clients.find(x => x.id === id))
+  }
 }
