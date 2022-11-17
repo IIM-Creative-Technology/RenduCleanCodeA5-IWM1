@@ -1,17 +1,12 @@
 {
     "extends": "./.nitro/types/tsconfig.json",
     "compilerOptions": {
+        "esModuleInterop": true,
         "baseUrl": "./",
         "paths": {
-            "@core/*": [
-                "core/*"
-            ],
-            "@features/*": [
-                "core/features/*"
-            ],
-            "@gateways/*": [
-                "core/gateways/*"
+            "~/*": [
+                "*"
             ]
         }
-    }
+    },
 }
