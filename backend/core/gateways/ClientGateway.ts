@@ -7,4 +7,5 @@ export interface ClientGateway {
   remove(id: string): Promise<Client>
   search(query: string): Promise<Client[]>
   create(name: string): Promise<Client>
+  update(modifiedClient: Client): Promise<Client>
 }
