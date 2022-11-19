@@ -5,7 +5,8 @@ import { getAllClients } from './getAllClients'
 describe('List all clients', () => {
   let clientGateway: InMemoryClientGateway
   beforeEach(() => {
-    clientGateway = new InMemoryClientGateway()
+    const uuidGenerator = () => 'test_id'
+    clientGateway = new InMemoryClientGateway(uuidGenerator)
   })
   describe('There is no clients', () => {
     it('should return an empty array', async () => {

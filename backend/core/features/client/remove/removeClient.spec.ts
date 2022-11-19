@@ -6,7 +6,8 @@ import { ClientError } from '~/core/errors/ClientError'
 describe('Remove a client', () => {
   let clientGateway: InMemoryClientGateway
   beforeEach(() => {
-    clientGateway = new InMemoryClientGateway()
+    const uuidGenerator = () => 'test_id'
+    clientGateway = new InMemoryClientGateway(uuidGenerator)
   })
   it('should remove the client corresponding to the given id', async () => {
     const clients = [

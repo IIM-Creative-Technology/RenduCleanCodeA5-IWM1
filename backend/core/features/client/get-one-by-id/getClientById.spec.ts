@@ -6,7 +6,8 @@ import { ClientError } from '~/core/errors/ClientError'
 describe('Get a client\'s details', () => {
   let clientGateway
   beforeEach(() => {
-    clientGateway = new InMemoryClientGateway()
+    const uuidGenerator = () => 'test_id'
+    clientGateway = new InMemoryClientGateway(uuidGenerator)
   })
 
   describe('The client already exists', () => {

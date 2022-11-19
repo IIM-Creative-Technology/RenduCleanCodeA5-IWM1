@@ -6,7 +6,8 @@ import { searchClients } from './searchClients'
 describe('Search clients', () => {
   let clientGateway: InMemoryClientGateway
   beforeEach(() => {
-    clientGateway = new InMemoryClientGateway()
+    const uuidGenerator = () => 'test_id'
+    clientGateway = new InMemoryClientGateway(uuidGenerator)
   })
   it('should return the clients with names containing the given string', async () => {
     const wantedResult = [
