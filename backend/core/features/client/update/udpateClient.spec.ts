@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { updateClient } from './updateclient'
+import { updateClient } from './updateClient'
 import { InMemoryClientGateway } from '~/adapters/secondary/gateways/client/InMemoryClientGateway'
 import type { Client } from '~/core/types/client'
 import { ClientError } from '~/core/errors/ClientError'

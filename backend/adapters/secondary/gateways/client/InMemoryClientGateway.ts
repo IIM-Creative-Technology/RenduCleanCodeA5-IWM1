@@ -37,6 +37,8 @@ export class InMemoryClientGateway implements ClientGateway {
   }
 
   async create(name: string): Promise<Client> {
+    if (!name)
+      throw new ClientError('Client name is not valid', 400)
     const newClient: Client = {
       id: this.uuidGenerator(),
       name,

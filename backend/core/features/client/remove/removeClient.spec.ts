@@ -1,6 +1,6 @@
-import { InMemoryClientGateway } from 'adapters/secondary/gateways/client/InMemoryClientGateway'
 import { beforeEach, describe, expect, it } from 'vitest'
 import { removeClient } from './removeClient'
+import { InMemoryClientGateway } from '~/adapters/secondary/gateways/client/InMemoryClientGateway'
 import { ClientError } from '~/core/errors/ClientError'
 
 describe('Remove a client', () => {
