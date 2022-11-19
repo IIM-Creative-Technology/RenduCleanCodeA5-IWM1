@@ -33,10 +33,23 @@ describe('Update a client', () => {
 
       expect(res).toEqual(modifiedClient)
     })
+
+    it('should update the client\'s record', async () => {
+      const modifiedClient: Client = {
+        id: '1',
+        name: 'Jojo Doe',
+      }
+
+      await updateClient(modifiedClient, clientGateway)
+
+      const storedClient = await clientGateway.getById('1')
+
+      expect(storedClient).toEqual(modifiedClient)
+    })
   })
 
   describe('the client doesn\'t exist', () => {
-    it('should retrun an error', async () => {
+    it('should return an error', async () => {
       const modifiedClient: Client = {
         id: '123',
         name: 'jojo',
