@@ -6,7 +6,7 @@ export class InMemoryClientGateway implements ClientGateway {
   private clients: Client[] = []
   private uuidGenerator: () => string
 
-  constructor(uuidGenerator: ()=> string) {
+  constructor(uuidGenerator: () => string) {
     this.uuidGenerator = uuidGenerator
   }
 
