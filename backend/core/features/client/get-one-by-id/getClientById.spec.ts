@@ -47,7 +47,7 @@ describe('Get a client\'s details', () => {
           name: 'Jane Doe',
         },
       ]
-      clientGateway.set(testClients)
+      await clientGateway.set(testClients)
 
       const testId = '3'
 

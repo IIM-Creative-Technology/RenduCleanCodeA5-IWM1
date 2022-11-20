@@ -9,7 +9,10 @@
     "build": "nitropack build"
   },
   "devDependencies": {
+    "@vitest/coverage-c8": "^0.25.2",
+    "nanoid": "^4.0.0",
     "nitropack": "^1.0.0",
+    "unstorage": "^1.0.1",
     "vitest": "^0.25.2"
   }
 }
