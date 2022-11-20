@@ -14,11 +14,12 @@ We could only go so far as to create the backend.
 
 ## Technology stack
 
-| Name   | Usage                                         |
-| ------ | --------------------------------------------- |
-| Vitest | Test framework to test our code.              |
-| Nitro  | Web server framework to create api endpoints. |
-| nanoid | Generate random UUID.                         |
+| Name       | Usage                                         |
+| ---------- | --------------------------------------------- |
+| Vitest     | Test framework to test our code.              |
+| Nitro      | Web server framework to create api endpoints. |
+| nanoid     | Generate random UUID.                         |
+| Pocketbase | Database/API generation                       |
 
 ## Running the project
 
