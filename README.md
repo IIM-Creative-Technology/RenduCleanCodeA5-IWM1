@@ -50,6 +50,19 @@ To get test coverage report:
 > npm run coverage -w <workspace>
 ```
 
+### Running the PocketBase instance
+
+You will need `Go@18+` to get the PocketBase instance running.
+
+Once installed run the instance using:
+
+```sh
+> cd /pocketbase
+> go run main.go serve
+```
+
+> The database will be setup on the first run.
+
 ## API usage
 
 Once the backend is running you should have access to different API routes:
