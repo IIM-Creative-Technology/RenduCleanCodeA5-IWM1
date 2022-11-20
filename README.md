@@ -54,7 +54,7 @@ To get test coverage report:
 
 ### Running the PocketBase instance
 
-You will need `Go@18+` to get the PocketBase instance running.
+You will need `go@18+` to get the PocketBase instance running.
 
 Once installed run the instance using:
 
@@ -66,6 +66,8 @@ Once installed run the instance using:
 > The database will be setup on the first run.
 
 You should then create a new collection in the admin dashboard called `clients` with a required text field `name`.
+
+> Don't forget to set the collection available to the public in the settings
 
 Now you can setup your `.env` file variable as followed:
 
