@@ -30,6 +30,8 @@ To get and install the project:
 > npm install
 ```
 
+> You will also need to copy the `.env.example` file to a `.env` file and modify the variables according to your usage.
+
 To get the backend running for development:
 
 ```sh
@@ -48,6 +50,30 @@ To get test coverage report:
 
 ```sh
 > npm run coverage -w <workspace>
+```
+
+### Running the PocketBase instance
+
+You will need `go@18+` to get the PocketBase instance running.
+
+Once installed run the instance using:
+
+```sh
+> cd /pocketbase
+> go run main.go serve
+```
+
+> The database will be setup on the first run.
+
+You should then create a new collection in the admin dashboard called `clients` with a required text field `name`.
+
+> Don't forget to set the collection available to the public in the settings
+
+Now you can setup your `.env` file variable as followed:
+
+```.env
+BACKEND=pocketbase
+POCKETBASE_URL=<your-pocket-base-url>
 ```
 
 ## API usage
