@@ -61,6 +61,7 @@ Once installed run the instance using:
 
 ```sh
 > cd /pocketbase
+> go get .
 > go run main.go serve
 ```
 
